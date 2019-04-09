@@ -7,23 +7,24 @@ class NavBar extends Component {
 constructor(props){
   super(props);
   this.state = ({
-    Current: <About DisplayTitle="About"/>,
-    About: <About DisplayTitle="About"/>,
-    Projects: <Projects DisplayTitle="Projects"/>
+    Current: this.props.startPage,
+    NavBarPages: this.props.NavBarPages
 });
 }
 
 handleContnentChange = (content) => {
   this.props.onSelectContent(content);
-  this.setState({Current: content})
+  this.setState({
+    Current: content
+  })
   console.log("Current view: "+ content.props.DisplayTitle);
 }
 
     render() {
         return (<div className="navbar">
-        <div className={this.state.Current.props.DisplayTitle === this.state.About.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(this.state.About)} >About</div>
-        <div className={this.state.Current.props.DisplayTitle === this.state.Projects.props.DisplayTitle  ? "active" : "passive"} onClick={() =>this.handleContnentChange(this.state.Projects)}>Projects</div>  
-      
+        {this.props.NavBarPages.map((answer, i) => {
+           return (<div className={this.state.Current.props.DisplayTitle === answer.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(answer)} >{answer.DisplayTitle}</div>) 
+        })}
       </div>);
     }
   }
