@@ -1,0 +1,10 @@
+.content {
+    background: whitesmoke;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding: 2.25rem;
+    overflow: hidden;
+    
+}
+
