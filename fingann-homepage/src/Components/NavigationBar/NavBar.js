@@ -7,7 +7,7 @@ class NavBar extends Component {
 constructor(props){
   super(props);
   this.state = ({
-    Current: this.props.startPage,
+    Current: this.props.NavBarPages[0],
     NavBarPages: this.props.NavBarPages
 });
 }
