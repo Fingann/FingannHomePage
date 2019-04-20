@@ -23,7 +23,7 @@ handleContentChanged = (content) => {
   render() {
     return (
       <div className="App">
-        <NavBar NavBarPages={this.NavBarPages} onSelectContent={this.handleContentChanged}/>
+        <NavBar NavBarPages={this.state.NavBarPages} onSelectContent={this.handleContentChanged}/>
         <Content Content={this.state.Content}/>
       </div>
     );

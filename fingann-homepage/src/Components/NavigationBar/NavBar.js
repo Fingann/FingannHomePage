@@ -22,8 +22,8 @@ handleContnentChange = (content) => {
 
     render() {
         return (<div className="navbar">
-        {this.props.NavBarPages.map((answer, i) => {
-           return (<div className={this.state.Current.props.DisplayTitle === answer.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(answer)} >{answer.DisplayTitle}</div>) 
+        {this.state.NavBarPages.map((answer, i) => {
+           return (<div key={i} className={this.state.Current.props.DisplayTitle === answer.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(answer)} >{answer.props.DisplayTitle}</div>) 
         })}
       </div>);
     }
