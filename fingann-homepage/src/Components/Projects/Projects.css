@@ -1,0 +1,41 @@
+.projects{
+    background: whitesmoke;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.padd-24 {
+    padding-bottom: 24px!important;
+    padding-top: 24px!important;
+}
+.border-bottom {
+    border-bottom: 1px solid #e1e4e8!important;
+}
+.fixed-content{
+    box-sizing: border-box;
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    position: relative;
+    height: 100%;
+    overflow:hidden;
+    overflow-y:scroll;
+
+}
+
+.projectItemList{
+    list-style-type: none;
+
+}
+
+/* .center{
+    margin-right: auto;
+    margin-left: auto;
+} */

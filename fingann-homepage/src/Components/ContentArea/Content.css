@@ -4,6 +4,7 @@
     /* box-sizing: border-box; */
     /* display: block; */
     padding: 2.25rem;
+    box-sizing: border-box;
     /* overflow: hidden; */
     
 }

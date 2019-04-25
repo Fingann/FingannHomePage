@@ -1,6 +1,4 @@
-.projects{
-    background: whitesmoke;
-    height: 90px;
+.projectItem{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
