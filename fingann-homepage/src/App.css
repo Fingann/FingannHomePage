@@ -17,3 +17,12 @@
     /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);} */
 }
 
+.content {
+  background: whitesmoke;
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 2.25rem;
+  overflow: hidden;
+  
+}
