@@ -1,7 +1,6 @@
 
 .navbar-content{
   color: #1d1e22 ;
-  background: whitesmoke;
 
 }
 .navbar {
@@ -15,9 +14,8 @@
     display: flex;
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
-    justify-content: space-around;
-    align-items: center;
-    background: whitesmoke;
+    justify-content: flex-start;
+    align-items: flex-end;
     
 }
 /* Medium screens */
@@ -25,7 +23,7 @@
     .navbar {
         
       /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      justify-content: space-around;
+      /* justify-content: space-around; */
     }
   }
   
@@ -34,12 +32,13 @@
     .navbar {
       /* On small screens, we are no longer using row direction but column */
       flex-direction: column;
+      align-items: center;
     }
   }
 
 
 .passive{
-    width: 5rem;
+    padding: 0;
     -ms-transition: opacity 200ms linear;
     -moz-transition: opacity 200ms linear;
     -webkit-transition: opacity 200ms linear;
@@ -48,14 +47,28 @@
     -webkit-cursor: pointer;
     cursor: pointer;
     opacity: 0.8;
+    font-size: 48px;
+    color: #D0D0D0;
+
 }
 .passive:hover{
-    opacity: 1;
-    font-weight: bold;
+  padding: 0;
+  -ms-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+  -moz-cursor: pointer;
+  -webkit-cursor: pointer;
+  cursor: pointer;
+  opacity: 0.8;
+  opacity: 1;
+  font-weight: bold;
+  font-size: 58px;
+  color: white ;
 }
 
 .active {
-    width: 5rem;;
+    padding: 0;
     -ms-transition: opacity 200ms linear;
     -moz-transition: opacity 200ms linear;
     -webkit-transition: opacity 200ms linear;
@@ -66,5 +79,11 @@
     opacity: 0.8;
     opacity: 1;
     font-weight: bold;
+    font-size: 58px;
+    color: white ;
+
     /* border-bottom: 2px solid; */
+}
+.title-text{
+  margin:0em;
 }

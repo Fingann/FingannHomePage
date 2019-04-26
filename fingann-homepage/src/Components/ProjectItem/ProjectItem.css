@@ -1,9 +1,40 @@
 .projectItem{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding:0.7rem;
+    border-radius: 9px;
+
+}
+.background {
+  background-color: whitesmoke;
+  border-radius: 9px;
+  padding: 2rem;
+  /* border: 1px solid black; */
+  opacity: 0.4;
+  display: flex;
+  
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.font-color {
+    color: #150101;
 }
 
-/* .center{
-    margin-right: auto;
-    margin-left: auto;
-} */
+.project-text{
+    display: inline-block!important;
+    width: 75%;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.links{
+    display: flex!important;
+    justify-content: space-around!important;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column!important;
+    width: 25%;
+}
+.align-right{
+    margin: 5px;
+}
+

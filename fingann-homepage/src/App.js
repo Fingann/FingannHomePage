@@ -11,7 +11,7 @@ class App extends Component {
     super(props)
     const NavBarPages = [<About DisplayTitle="About"/>,<Projects DisplayTitle="Projects"/>]
     this.state = {
-      Content: NavBarPages[0],
+      Content: NavBarPages[1],
       NavBarPages: NavBarPages
     }
 }

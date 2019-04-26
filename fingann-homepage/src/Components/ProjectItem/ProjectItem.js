@@ -10,9 +10,20 @@ class ProjectItem extends Component {
       }
     render() {
       return (
-            <div className="projectItem">
-              {this.state.project.name}
-            </div>
+            <li className="projectItem " >
+                <div class="background">
+                  <div className="project-text">
+                      <h2 className="font-color"> {this.state.project.name}</h2>
+                      <p className="font-color" >{this.state.project.description}</p>
+                  </div>
+                  <div className="links">
+                      <a className="align-right" href={this.state.project.html_url}> 
+                        <img  src="/images/External_Link.svg" height="40px" width="40px" alt="Kiwi standing on oval"/>
+                      </a>  
+                  </div>
+                </div>
+            
+            </li>
       );
     }
   }

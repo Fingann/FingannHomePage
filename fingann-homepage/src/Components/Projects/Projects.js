@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProjectItem from '../ProjectItem/ProjectItem'
+import ProjectList from '../ProjectList/ProjectList'
 import './Projects.css'
 
 
@@ -42,15 +43,16 @@ class Projects extends Component {
     }
 
     render() {
-      const projectList = this.state.projectsData.map((project,i) => <li key={i} className="padd-24 border-bottom"><ProjectItem project={project}/></li>);
+      const projectList = this.state.projectsData.map((project,i) => <ProjectItem project={project}/>);
       return (
             <div className="projects center">
               {this.state.loading === true
                         ? <div >Loading</div>
                         :
-                        <ul className="fixed-content">
-                        {projectList}
-                        </ul>
+                        <ProjectList projects={this.state.projectsData}/>
+                        // <ul className="fixed-content">
+                        // {projectList}
+                        // </ul>
                     }
             </div>
       );

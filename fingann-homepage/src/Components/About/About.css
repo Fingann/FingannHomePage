@@ -1,5 +1,4 @@
 .about {
-    background: whitesmoke;
     display: flex;
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
