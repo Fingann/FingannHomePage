@@ -40,3 +40,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 .font-bold{
     font-weight: bold;
 }
+  
+  /* Small screens */
+  @media all and (max-width: 800px) {
+    .project-info{
+        flex-direction: column;
+    }
+  }

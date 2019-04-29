@@ -8,3 +8,10 @@
     
 }
 
+
+ /* Small screens */
+ @media all and (max-width: 800px) {
+    .content{
+        padding: 1rem;
+    }
+  }

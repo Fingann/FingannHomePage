@@ -1,4 +1,5 @@
 .App {
+  overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
   position: absolute;
@@ -26,4 +27,11 @@
   padding: 2.25rem;
   overflow: hidden;
   
+}
+
+ /* Small screens */
+ @media all and (max-width: 800px) {
+  .App{
+      padding: 0rem;
+  }
 }

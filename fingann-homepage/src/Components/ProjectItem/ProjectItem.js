@@ -21,9 +21,9 @@ class ProjectItem extends Component {
                       {this.props.project.description != null && <p className="font-color ">{this.props.project.description}</p>}
                   </div>
                   <div className="project-info">
-                    <p className="font-color" > Writen in <span className="font-bold">{this.props.project.language|| "Not detected"}</span></p>
-                    <p className="font-color" > Updated <span className="font-bold">{this.format_date(this.props.project.updated_at)}</span></p>
-                    <p className="font-color " > Created <span className="font-bold">{this.format_date(this.props.project.created_at)}</span></p>
+                    <p className="font-color" >Writen in <span className="font-bold">{this.props.project.language|| "Not detected"}</span></p>
+                    <p className="font-color " >Created <span className="font-bold">{this.format_date(this.props.project.created_at)}</span></p>
+                    <p className="font-color" >Updated <span className="font-bold">{this.format_date(this.props.project.updated_at)}</span></p>
                   </div>
                 </div>
             
