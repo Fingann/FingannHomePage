@@ -16,14 +16,28 @@
     /* This aligns items to the end line on main-axis */
     justify-content: flex-start;
     align-items: flex-end;
+    min-height: 70px;
     
 }
 /* Medium screens */
 @media all and (max-width: 800px) {
     .navbar {
-        
+      flex-direction: column;
+      align-items: center;
+      min-height: 140px;
+
       /* When on medium sized screens, we center it by evenly distributing empty space around items */
       /* justify-content: space-around; */
+    }
+    .active{
+      color: #788ad0!important;
+    }
+    .passive{
+      color:#8e9eab!important;
+    }
+    .passive:hover{
+      color: #788ad0!important;
+
     }
   }
   
@@ -33,6 +47,18 @@
       /* On small screens, we are no longer using row direction but column */
       flex-direction: column;
       align-items: center;
+      min-height: 140px;
+
+    }
+    .active{
+      color: #788ad0!important;
+    }
+    .passive{
+      color:#8e9eab!important;
+    }
+    .passive:hover{
+      color: #788ad0!important;
+
     }
   }
 

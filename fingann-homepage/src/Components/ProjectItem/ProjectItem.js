@@ -15,6 +15,7 @@ class ProjectItem extends Component {
                   <div className="project-text">
                       <h2 className="font-color"> {this.state.project.name}</h2>
                       <p className="font-color" >{this.state.project.description}</p>
+                      <p className="font-color" > Language: {this.state.project.language}</p>
                   </div>
                   <div className="links">
                       <a className="align-right" href={this.state.project.html_url}> 

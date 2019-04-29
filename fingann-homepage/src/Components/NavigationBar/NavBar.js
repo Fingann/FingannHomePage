@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './NavBar.css'
 
 
@@ -6,8 +7,7 @@ class NavBar extends Component {
 constructor(props){
   super(props);
   this.state = ({
-    Current: this.props.NavBarPages[0],
-    NavBarPages: this.props.NavBarPages
+    Current: this.props.Pages[1]
 });
 }
 
@@ -21,8 +21,8 @@ handleContnentChange = (content) => {
 
     render() {
         return (<div className="navbar">
-        {this.state.NavBarPages.map((answer, i) => {
-           return (<div key={i} className={this.state.Current.props.DisplayTitle === answer.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(answer)} ><p className="title-text">{answer.props.DisplayTitle}</p></div>) 
+        {this.props.Pages.map((page, i) => {
+           return (<div key={i} className={this.state.Current.props.DisplayTitle === page.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(page)} ><p className="title-text">{page.props.DisplayTitle}</p></div>) 
         })}
       </div>);
     }

@@ -9,10 +9,10 @@ class App extends Component {
 
   constructor(props){
     super(props)
-    const NavBarPages = [<About DisplayTitle="About"/>,<Projects DisplayTitle="Projects"/>]
+    const NavBarPages = [<About DisplayTitle="About" path="/about"/>,<Projects DisplayTitle="Projects" path="/projects"/>]
     this.state = {
-      Content: NavBarPages[1],
-      NavBarPages: NavBarPages
+      Content: NavBarPages[0],
+      Pages: NavBarPages
     }
 }
 
@@ -23,7 +23,7 @@ handleContentChanged = (content) => {
   render() {
     return (
       <div className="App">
-        <NavBar NavBarPages={this.state.NavBarPages} onSelectContent={this.handleContentChanged}/>
+        <NavBar Pages={this.state.Pages} onSelectContent={this.handleContentChanged}/>
         <Content Content={this.state.Content}/>
       </div>
     );

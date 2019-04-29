@@ -1,18 +1,43 @@
 .about {
     display: flex;
-    flex-flow: row wrap;
-    /* This aligns items to the end line on main-axis */
-    justify-content: space-around;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
 }
 
-.secoundColumn{
-    grid-column-start:2;
+.welcometext
+{
+    white-space: nowrap;
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: rgba(255,255,255,1);
+
 }
 
-.firstColumn{
-    grid-column-start:1;
-}
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .about{
+        height: 60%
+    }
+    .welcometext {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      /* justify-content: space-around; */
+      font-size: 30px
+    }
+  }
+  
+  /* Small screens */
+  @media all and (max-width: 500px) {
+    .about{
+        height: 50%
+    }
+    .welcometext {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        /* justify-content: space-around; */
+        font-size: 24px
+      }
+  }
