@@ -7,7 +7,7 @@ class NavBar extends Component {
 constructor(props){
   super(props);
   this.state = ({
-    Current: this.props.Pages[1]
+    Current: this.props.Pages[0]
 });
 }
 
@@ -20,11 +20,11 @@ handleContnentChange = (content) => {
 }
 
     render() {
-        return (<div className="navbar">
+        return (<nav className="navbar">
         {this.props.Pages.map((page, i) => {
            return (<div key={i} className={this.state.Current.props.DisplayTitle === page.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(page)} ><p className="title-text">{page.props.DisplayTitle}</p></div>) 
         })}
-      </div>);
+      </nav>);
     }
   }
   

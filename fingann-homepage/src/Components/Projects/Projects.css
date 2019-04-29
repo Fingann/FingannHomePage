@@ -21,6 +21,16 @@
 
 }
 
+.loading{
+    color: white;
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 /* .center{
     margin-right: auto;
     margin-left: auto;

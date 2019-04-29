@@ -10,6 +10,7 @@ class ProjectItem extends Component {
       }
     render() {
       return (
+        <a href={this.state.project.html_url}>
             <li className="projectItem " >
                 <div class="background">
                   <div className="project-text">
@@ -25,6 +26,7 @@ class ProjectItem extends Component {
                 </div>
             
             </li>
+            </a>
       );
     }
   }
