@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProjectItem from '../ProjectItem/ProjectItem'
 import ProjectList from '../ProjectList/ProjectList'
 import Loader from '../Loader/Loader'
 

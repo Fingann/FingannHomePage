@@ -6,8 +6,8 @@ class Loader extends Component {
     render() {
       return (
           <div>
-        <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
-        <circle fill="none" stroke="#fff" stroke-width="6" stroke-miterlimit="15" stroke-dasharray="14.2472,14.2472" cx="50" cy="50" r="47" >
+        <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 100 100" >
+        <circle fill="none" stroke="#fff" strokeWidth="6" strokeMiterlimit="15" strokeDasharray="14.2472,14.2472" cx="50" cy="50" r="47" >
           <animateTransform 
              attributeName="transform" 
              attributeType="XML" 
@@ -17,7 +17,7 @@ class Loader extends Component {
              to="360 50 50" 
              repeatCount="indefinite" />
       </circle>
-      <circle fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="10,10" cx="50" cy="50" r="39">
+      <circle fill="none" stroke="#fff" strokeWidth="1" strokeMiterlimit="10" strokeDasharray="10,10" cx="50" cy="50" r="39">
           <animateTransform 
              attributeName="transform" 
              attributeType="XML" 
