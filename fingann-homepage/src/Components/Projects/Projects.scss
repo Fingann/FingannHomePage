@@ -1,0 +1,19 @@
+@import '../../GlobalCss/Responisve.scss';
+
+.projects{
+    color: black;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+
+.loading{
+    color: white;
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,56 @@
+@import '../../GlobalCss/Responisve.scss';
+
+.projectItem{
+    padding:0.7rem;
+    border-radius: 9px;
+
+}
+.background:hover{
+    background-color: #e7f0fd;
+
+}
+
+.background {
+  background-color: whitesmoke;
+  border-radius: 9px;
+  padding: 2rem;
+  opacity: 0.4;
+  display: flex;
+  flex-direction: column;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.font-color {
+    color: #150101;
+}
+
+.project-text{
+    display: inline-block!important;
+}
+.project-info{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @include respond-to(handhelds) { 
+        display:none;
+        }
+        
+      @include respond-to(medium-screens) { 
+        }
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+  
+  /* Small screens */
+  @media all and (max-width: 800px) {
+    .project-info{
+        flex-direction: column;
+    }
+  }

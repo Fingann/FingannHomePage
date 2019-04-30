@@ -1,115 +1,89 @@
-
-.navbar-content{
-  color: #1d1e22 ;
-
-}
 .navbar {
-    color: #1d1e22 ;
-    /* display: grid; */
-    /* grid-template-columns: 50% 50%; */
-    text-align: center;
-    font-size: 100%;
-    
-    padding: 2.25rem;
-    display: flex;
-    flex-flow: row wrap;
-    /* This aligns items to the end line on main-axis */
-    justify-content: flex-start;
-    align-items: flex-end;
-    min-height: 70px;
-    
+  color: #D0D0D0;
+  text-align: center;
+  padding: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-/* Medium screens */
-@media all and (max-width: 800px) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      min-height: 140px;
 
-      /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      /* justify-content: space-around; */
-    }
-    .active{
-      color: #788ad0!important;
-    }
-    .passive{
-      color:#8e9eab!important;
-    }
-    .passive:hover{
-      color: #788ad0!important;
-
-    }
+@media only screen and (max-width: 380px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 120px !important;
+    padding: 0% !important;
   }
-  
-  /* Small screens */
-  @media all and (max-width: 500px) {
-    .navbar {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-      align-items: center;
-      min-height: 140px;
-
-    }
-    .active{
-      color: #788ad0!important;
-    }
-    .passive{
-      color:#8e9eab!important;
-    }
-    .passive:hover{
-      color: #788ad0!important;
-
-    }
-  }
-
-
-.passive{
-    padding: 0;
-    -ms-transition: opacity 200ms linear;
-    -moz-transition: opacity 200ms linear;
-    -webkit-transition: opacity 200ms linear;
-    transition: opacity 200ms linear;
-    -moz-cursor: pointer;
-    -webkit-cursor: pointer;
-    cursor: pointer;
-    opacity: 0.8;
-    font-size: 48px;
-    color: #D0D0D0;
-
 }
-.passive:hover{
-  padding: 0;
-  -ms-transition: opacity 200ms linear;
-  -moz-transition: opacity 200ms linear;
+
+@media only screen and (min-width: 381px) and (max-width: 1024px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 140px;
+    padding: 1rem;
+  }
+}
+
+.passive, .active, .passive:hover {
   -webkit-transition: opacity 200ms linear;
   transition: opacity 200ms linear;
   -moz-cursor: pointer;
   -webkit-cursor: pointer;
   cursor: pointer;
-  opacity: 0.8;
   opacity: 1;
+}
+
+.passive {
+  font-size: 48px;
+}
+
+@media only screen and (max-width: 380px) {
+  .passive {
+    color: #8e9eab !important;
+    font-size: 38px;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 1024px) {
+  .passive {
+    color: #8e9eab !important;
+  }
+}
+
+.active, .passive:hover {
   font-weight: bold;
   font-size: 58px;
-  color: white ;
+  color: white;
 }
 
-.active {
-    padding: 0;
-    -ms-transition: opacity 200ms linear;
-    -moz-transition: opacity 200ms linear;
-    -webkit-transition: opacity 200ms linear;
-    transition: opacity 200ms linear;
-    -moz-cursor: pointer;
-    -webkit-cursor: pointer;
-    cursor: pointer;
-    opacity: 0.8;
-    opacity: 1;
-    font-weight: bold;
-    font-size: 58px;
-    color: white ;
+@media only screen and (max-width: 380px) {
+  .active, .passive:hover {
+    color: #788ad0 !important;
+    font-weight: 48px;
+  }
+}
 
-    /* border-bottom: 2px solid; */
+@media only screen and (min-width: 381px) and (max-width: 1024px) {
+  .active, .passive:hover {
+    color: #788ad0 !important;
+  }
 }
-.title-text{
-  margin:0em;
+
+.title-text {
+  margin: 0em;
 }
+/*# sourceMappingURL=NavBar.css.map */

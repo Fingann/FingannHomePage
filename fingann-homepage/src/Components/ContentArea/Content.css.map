@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,QAAQ,CAAC;EACL,MAAM,EAAE,GAAG;EAEX,UAAU,EAAE,UAAU;CAQzB;;ACZK,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDC9C,AAAA,QAAQ,CAAC;IAKD,MAAM,EAAE,GAAG;GAMlB;;;ACTK,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,MAAM;EDFtE,AAAA,QAAQ,CAAC;IASD,MAAM,EAAE,GAAG;GAElB",
+    "sources": [
+        "Content.scss",
+        "../../GlobalCss/Responisve.scss"
+    ],
+    "names": [],
+    "file": "Content.css"
+}
