@@ -19,7 +19,6 @@ class Projects extends Component {
       }
      
       componentDidMount() {
-          console.log("ComponentMounted")
           this.setState({
               loading: true
           })
@@ -34,7 +33,6 @@ class Projects extends Component {
         fetch(`https://api.github.com/users/Fingann/repos`)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           this.setState({
             projectsData: data,
             loading: false

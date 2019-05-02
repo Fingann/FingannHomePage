@@ -10,6 +10,11 @@
           align-items: flex-end;
 }
 
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media only screen and (max-width: 380px) {
   .navbar {
     -webkit-box-orient: vertical;
@@ -48,6 +53,7 @@
 }
 
 .passive {
+  color: #8e9eab !important;
   font-size: 48px;
 }
 
@@ -67,7 +73,7 @@
 .active, .passive:hover {
   font-weight: bold;
   font-size: 58px;
-  color: white;
+  color: white !important;
 }
 
 @media only screen and (max-width: 380px) {
