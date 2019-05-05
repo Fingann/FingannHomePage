@@ -1,37 +1,27 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom'
-import './NavBar.css'
-
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 class NavBar extends Component {
-constructor(props){
-  super(props);
-  this.state = ({
-    Current: this.props.Pages[0]
-});
-}
-
-handleContnentChange = (content) => {
-  this.props.onSelectContent(content);
-  this.setState({
-    Current: content
-  })
-  console.log("Current view: "+ content.props.DisplayTitle);
-}
-
-    render() {
-        return (<nav className="navbar">
+  render() {
+    return (
+      <nav className="navbar">
         {this.props.Pages.map((page, i) => {
-          return(<NavLink exact key={i} className="passive" to={page.props.path} activeClassName="active">
-                  {page.props.DisplayTitle}
-                </NavLink>
-                
-                )
-          //  return (<div key={i} className={this.state.Current.props.DisplayTitle === page.props.DisplayTitle  ? "active" : "passive"} onClick={() => this.handleContnentChange(page)} ><p className="title-text">{page.props.DisplayTitle}</p></div>) 
+          return (
+            <NavLink
+              exact
+              key={i}
+              className="passive"
+              to={page.Path}
+              activeClassName="active"
+            >
+              {page.Title}
+            </NavLink>
+          );
         })}
-      </nav>);
-    }
+      </nav>
+    );
   }
-  
-  export default NavBar;
-  
+}
+
+export default NavBar;

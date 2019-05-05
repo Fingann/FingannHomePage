@@ -8,9 +8,7 @@ import './Projects.css'
 class Projects extends Component {
     constructor(props){
         super(props);
-        this.state = ({DisplayTitle: "Projects"});
         this.state = {
-          DisplayTitle: "Projects",
           projectsData: [],
           loading: true
         };
@@ -41,22 +39,23 @@ class Projects extends Component {
       },1000)
     }
 
+
+    DisplayProjects(props){
+      console.log(props)
+      if(props.loading){
+        return <div className="loading">
+                  <Loader />
+                  <h2>Loading projects</h2>
+                </div>;
+      }
+      return <ProjectList projects={props.projectsData}/>
+    }
+
     render() {
       return (
-            <div className="projects center">
-              {this.state.loading === true
-                        ? <div className="loading">
-                            <Loader  />
-                            <h2>Loading projects</h2>
-                          </div>
-                        :
-                        
-                        <ProjectList projects={this.state.projectsData}/>
-                        // <ul className="fixed-content">
-                        // {projectList}
-                        // </ul>
-                    }
-            </div>
+            <section className="projects">
+              {this.DisplayProjects(this.state)}
+            </section>
       );
     }
 
