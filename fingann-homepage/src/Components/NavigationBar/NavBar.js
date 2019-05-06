@@ -2,26 +2,24 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-class NavBar extends Component {
-  render() {
-    return (
-      <nav className="navbar">
-        {this.props.Pages.map((page, i) => {
-          return (
-            <NavLink
-              exact
-              key={i}
-              className="passive"
-              to={page.Path}
-              activeClassName="active"
-            >
-              {page.Title}
-            </NavLink>
-          );
-        })}
-      </nav>
-    );
-  }
-}
+const NavBar = ({ Pages }) => (
+  <nav className="navbar">
+    {Pages.map((page, i) => {
+      return <NavigationLink page={page} identifier={i} />;
+    })}
+  </nav>
+);
+
+const NavigationLink = ({ page, identifier }) => (
+  <NavLink
+    exact
+    key={identifier}
+    className="passive"
+    to={page.Path}
+    activeClassName="active"
+  >
+    {page.Title}
+  </NavLink>
+);
 
 export default NavBar;
