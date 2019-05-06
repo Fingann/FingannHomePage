@@ -1,67 +1,45 @@
-import React, { Component } from 'react';
-import ProjectList from '../ProjectList/ProjectList'
-import Loader from '../Loader/Loader'
+import React, { Component, useState, useEffect } from "react";
+import ProjectList from "./ProjectList/ProjectList";
+import Spinner from "./Spinner/Spinner";
+import getProjects from "./GithubApi/GithubApiFetcher";
 
-import './Projects.css'
-
-
-class Projects extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-          projectsData: [],
-          loading: true
-        };
-        this.getProjects = this.getProjects.bind(this);
-
-      }
-     
-      componentDidMount() {
-          this.setState({
-              loading: true
-          })
-          this.getProjects();
-      }
-    getProjects = () => {
-      this.setState({
-        loading: true
-      })
-  
-      setTimeout( () => {
-        fetch(`https://api.github.com/users/Fingann/repos`)
-        .then(response => response.json())
-        .then(data => {
-          this.setState({
-            projectsData: data,
-            loading: false
-          });
-        })
-      },1000)
-    }
+import "./Projects.css";
 
 
-    DisplayProjects(props){
-      console.log(props)
-      if(props.loading){
-        return <div className="loading">
-                  <Loader />
-                  <h2>Loading projects</h2>
-                </div>;
-      }
-      return <ProjectList projects={props.projectsData}/>
-    }
+ function GetProjectsHook(){
 
-    render() {
-      return (
-            <section className="projects">
-              {this.DisplayProjects(this.state)}
-            </section>
-      );
-    }
+  const [Result, setResult] = useState([]);
+  const [Loading, setLoading] = useState(true);
 
-    
-
+  useEffect(() => {
+    fetch(`https://api.github.com/users/Fingann/repos`)
+      .then(response => response.json())
+      .then(data => {
+        setResult(data);
+        setLoading(false);
+      });
+  }, []);
+  return {Loading:Loading, Result:Result};
 }
-  
-  export default Projects;
-  
+
+
+const DisplayProjects = () => {
+  const {Loading, Result} = GetProjectsHook();
+
+  return Loading ? (
+    <div className="loading">
+      <Spinner />
+      <h2>Loading projects</h2>
+    </div>
+  ) : (
+    <ProjectList Projects={Result} />
+  );
+};
+
+const Projects = () => (
+  <section className="projects">
+    <DisplayProjects />
+  </section>
+);
+
+export default Projects;

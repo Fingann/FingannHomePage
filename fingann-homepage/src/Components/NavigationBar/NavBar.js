@@ -5,7 +5,7 @@ import "./NavBar.css";
 const NavBar = ({ Pages }) => (
   <nav className="navbar">
     {Pages.map((page, i) => {
-      return <NavigationLink page={page} identifier={i} />;
+      return <NavigationLink key={i} page={page} identifier={i} />;
     })}
   </nav>
 );
@@ -13,11 +13,9 @@ const NavBar = ({ Pages }) => (
 const NavigationLink = ({ page, identifier }) => (
   <NavLink
     exact
-    key={identifier}
     className="passive"
     to={page.Path}
-    activeClassName="active"
-  >
+    activeClassName="active">
     {page.Title}
   </NavLink>
 );

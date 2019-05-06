@@ -1,78 +1,54 @@
-@import '../../GlobalCss/Responisve.scss';
+@import "../../GlobalCss/Responisve.scss";
 
-$accent-color: white!important;
-$accent2-color:#c7c7c7!important;
-
-
+$accent-color: white !important;
+$accent2-color: #c7c7c7 !important;
 
 .navbar {
-    padding: 2rem;
-    display:flex;
-    align-items: flex-end;    
-    a{
-      text-decoration: none;
-      -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #565555;
-    }
-
-    // @include respond-to(handhelds) { 
-    //   flex-direction: row;
-    //   align-items: center;
-    //   }
-      
-    // @include respond-to(medium-screens) { 
-    //   flex-direction: row;
-    //   align-items: center;
-    //    }
+  padding: 2rem;
+  display: flex;
+  align-items: baseline;
+  a {
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #565555;
+  }
 }
-  
-%menu-item-shared{
+
+%menu-item-shared {
   -ms-transition: opacity 200ms linear;
   -moz-transition: opacity 200ms linear;
   -webkit-transition: opacity 200ms linear;
   transition: opacity 200ms linear;
-  
   opacity: 1;
-
 }
 
-.passive{
-  color:$accent2-color;
-    @extend %menu-item-shared;
+.passive {
+  color: $accent2-color;
+  @extend %menu-item-shared;
+  font-size: 48px;
+
+  @include respond-to(handhelds) {
+    font-size: 28px;
+  }
+  @include respond-to(medium-screens) {
+    font-size: 38px;
+  }
+}
+
+.active,
+.passive:hover {
+  @extend %menu-item-shared;
+  font-weight: bold;
+  font-size: 58px;
+  color: $accent-color;
+
+  @include respond-to(handhelds) {
+    font-size: 38px;
+  }
+  @include respond-to(medium-screens) {
     font-size: 48px;
-  
-    @include respond-to(handhelds) {
-       font-size: 28px;
-    }
-    @include respond-to(medium-screens) {
-       font-size: 38px;
-
-    }
-  
-
+  }
 }
-
-.active, .passive:hover {
-    @extend %menu-item-shared;
-    font-weight: bold;
-    font-size: 58px;
-    color: $accent-color;
-
-    @include respond-to(handhelds) {
-       font-size: 38px;
-      
-    }
-    @include respond-to(medium-screens) {
-       font-size: 48px;
-
-    }
-}
-.title-text{
-  margin:0em;
-}
-
-
-
 
 // @include respond-to(handhelds) { width: 100% ;}
 //   @include respond-to(medium-screens) { width: 125px; }
