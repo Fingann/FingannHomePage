@@ -1,29 +1,30 @@
 .App {
-  padding: 2rem;
-  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-    display: block;
-    margin: 0;
-    /* background: #8e9eab;  fallback for old browsers */
-    /* background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to top, #eef2f3, #8e9eab); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: url('/images/Road_blur2.png');
-    background-position: 50% 50%;
-    background-size: auto;
-    /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);} */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  background: url("/images/Road_blur2-min.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .content {
-  height: 100%;
-  box-sizing: border-box;
-  display: block;
-  padding: 2.25rem;
-  overflow: hidden;
-  
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  width: 100%;
 }
+/*# sourceMappingURL=App.css.map */

@@ -1,43 +1,48 @@
 .about {
-    display: flex;
-    height: 80%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.welcometext
-{
-    white-space: nowrap;
-    text-align: center;
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    color: rgba(255,255,255,1);
-
+.welcometext {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: white;
 }
 
 /* Medium screens */
 @media all and (max-width: 800px) {
-    .about{
-        height: 60%
-    }
-    .welcometext {
-      /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      /* justify-content: space-around; */
-      font-size: 30px
-    }
+  .about {
+    height: 60%;
   }
-  
-  /* Small screens */
-  @media all and (max-width: 500px) {
-    .about{
-        height: 50%
-    }
-    .welcometext {
-        /* When on medium sized screens, we center it by evenly distributing empty space around items */
-        /* justify-content: space-around; */
-        font-size: 24px
-      }
+  .welcometext {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    /* justify-content: space-around; */
+    font-size: 30px;
   }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .about {
+    height: 50%;
+  }
+  .welcometext {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    /* justify-content: space-around; */
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=About.css.map */

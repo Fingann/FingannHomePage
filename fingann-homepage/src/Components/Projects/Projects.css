@@ -1,27 +1,32 @@
-.projects{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    color: black;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
+.projects {
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0rem 1rem 1rem 1rem;
 }
 
-.padd-24 {
-    padding-bottom: 24px!important;
-    padding-top: 24px!important;
-}
-.border-bottom {
-    border-bottom: 1px solid #e1e4e8!important;
+@media only screen and (max-width: 380px) {
+  .projects {
+    padding: 0%;
+  }
 }
 
-
-.projectItemList{
-    list-style-type: none;
-
+.loading {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-/* .center{
-    margin-right: auto;
-    margin-left: auto;
-} */
+/*# sourceMappingURL=Projects.css.map */

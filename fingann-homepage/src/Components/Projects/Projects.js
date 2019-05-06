@@ -1,63 +1,45 @@
-import React, { Component } from 'react';
-import ProjectItem from '../ProjectItem/ProjectItem'
-import ProjectList from '../ProjectList/ProjectList'
-import './Projects.css'
+import React, { Component, useState, useEffect } from "react";
+import ProjectList from "./ProjectList/ProjectList";
+import Spinner from "./Spinner/Spinner";
+import getProjects from "./GithubApi/GithubApiFetcher";
+
+import "./Projects.css";
 
 
-class Projects extends Component {
-    constructor(props){
-        super(props);
-        this.state = ({DisplayTitle: "Projects"});
-        this.state = {
-          DisplayTitle: "Projects",
-          projectsData: [],
-          loading: true
-        };
-        this.getProjects = this.getProjects.bind(this);
+ function GetProjectsHook(){
 
-      }
-     
-      componentDidMount() {
-          console.log("ComponentMounted")
-          this.setState({
-              loading: true
-          })
-          this.getProjects();
-      }
-    getProjects = () => {
-      this.setState({
-        loading: true
-      })
-  
-      setTimeout( () => {
-        fetch(`https://api.github.com/users/Fingann/repos`)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          this.setState({
-            projectsData: data,
-            loading: false
-          });
-        })
-      },1000)
-    }
+  const [Result, setResult] = useState([]);
+  const [Loading, setLoading] = useState(true);
 
-    render() {
-      const projectList = this.state.projectsData.map((project,i) => <ProjectItem project={project}/>);
-      return (
-            <div className="projects center">
-              {this.state.loading === true
-                        ? <div >Loading</div>
-                        :
-                        <ProjectList projects={this.state.projectsData}/>
-                        // <ul className="fixed-content">
-                        // {projectList}
-                        // </ul>
-                    }
-            </div>
-      );
-    }
+  useEffect(() => {
+    fetch(`https://api.github.com/users/Fingann/repos`)
+      .then(response => response.json())
+      .then(data => {
+        setResult(data);
+        setLoading(false);
+      });
+  }, []);
+  return {Loading:Loading, Result:Result};
 }
-  
-  export default Projects;
-  
+
+
+const DisplayProjects = () => {
+  const {Loading, Result} = GetProjectsHook();
+
+  return Loading ? (
+    <div className="loading">
+      <Spinner />
+      <h2>Loading projects</h2>
+    </div>
+  ) : (
+    <ProjectList Projects={Result} />
+  );
+};
+
+const Projects = () => (
+  <section className="projects">
+    <DisplayProjects />
+  </section>
+);
+
+export default Projects;

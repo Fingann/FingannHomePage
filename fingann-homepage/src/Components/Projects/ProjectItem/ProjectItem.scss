@@ -1,0 +1,55 @@
+@import '../../GlobalCss/Responisve.scss';
+
+.projectItem{
+    padding:0.7rem;
+    border-radius: 9px;
+
+}
+
+
+.background {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 9px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+.project-text{
+    display: inline-block!important;
+}
+.project-info{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @include respond-to(handhelds) { 
+        display:none;
+        flex-direction: column;
+
+        }
+        
+      @include respond-to(medium-screens) { 
+        flex-direction: column;
+
+        }
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    margin-bottom: 0;
+    margin-top: 0;
+    
+
+}
+
+.font-bold{
+    font-weight: bold;
+}
+  
+  
