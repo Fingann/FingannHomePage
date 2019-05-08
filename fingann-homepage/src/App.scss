@@ -1,7 +1,7 @@
 @import './GlobalCss/Responisve.scss';
 
 
-.App {
+.app {
   overflow: hidden;
   // padding: 2rem;
   box-sizing: border-box;
@@ -16,10 +16,9 @@
   flex-direction: column;
   margin: 0;
   background: url('/images/Road_blur2-min.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
     // @include respond-to(handhelds) { 
     //   padding: 0rem;
     //  }
@@ -27,6 +26,16 @@
     // @include respond-to(medium-screens) { 
     //   padding: 1rem;
     //  }
+   }
+
+   .overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.6) 100%);
    }
 
 

@@ -41,9 +41,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
           <NavBar Pages={navigationIndex} />
           <DisplayContent></DisplayContent>
+          <div className="overlay"></div>
       </div>
 
     );
