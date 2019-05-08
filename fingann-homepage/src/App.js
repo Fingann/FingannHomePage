@@ -39,16 +39,13 @@ function DisplayContent(){
 
 class App extends Component {
 
-  
-
   render() {
     return (
       <div className="App">
-        <Router>
           <NavBar Pages={navigationIndex} />
           <DisplayContent></DisplayContent>
-        </Router>
       </div>
+
     );
   }
 }

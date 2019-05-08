@@ -5,9 +5,7 @@ import getProjects from "./GithubApi/GithubApiFetcher";
 
 import "./Projects.css";
 
-
- function GetProjectsHook(){
-
+function GetProjectsHook() {
   const [Result, setResult] = useState([]);
   const [Loading, setLoading] = useState(true);
 
@@ -19,12 +17,11 @@ import "./Projects.css";
         setLoading(false);
       });
   }, []);
-  return {Loading:Loading, Result:Result};
+  return { Loading: Loading, Result: Result };
 }
 
-
 const DisplayProjects = () => {
-  const {Loading, Result} = GetProjectsHook();
+  const { Loading, Result } = GetProjectsHook();
 
   return Loading ? (
     <div className="loading">

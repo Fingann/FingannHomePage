@@ -9,8 +9,10 @@ RUN npm install react-scripts@1.1.1 -g --silent
 COPY . /usr/src/app
 RUN npm run build
 
-# production environment
-FROM nginx:1.13.9-alpine
+# Stage 2 - the production environment
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+
