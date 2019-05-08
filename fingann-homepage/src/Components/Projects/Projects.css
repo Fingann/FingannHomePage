@@ -4,7 +4,7 @@
           box-sizing: border-box;
   height: 100%;
   width: 100%;
-  padding: 0rem 1rem 1rem 1rem;
+  padding: 0rem 3rem 1rem 3rem;
 }
 
 @media only screen and (max-width: 380px) {

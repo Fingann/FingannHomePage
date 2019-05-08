@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import ProjectList from "./ProjectList/ProjectList";
 import Spinner from "./Spinner/Spinner";
 import getProjects from "./GithubApi/GithubApiFetcher";
+import jsonResponse from  './LocalDatabase'
 
 import "./Projects.css";
 
@@ -10,12 +11,15 @@ function GetProjectsHook() {
   const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/Fingann/repos`)
-      .then(response => response.json())
-      .then(data => {
-        setResult(data);
-        setLoading(false);
-      });
+
+    setResult(jsonResponse);
+    setLoading(false)
+    // fetch(`https://api.github.com/users/Fingann/repos`)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setResult(data);
+    //     setLoading(false);
+    //   });
   }, []);
   return { Loading: Loading, Result: Result };
 }
