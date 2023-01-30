@@ -1,3 +1,6 @@
+@import '../../../GlobalCss/Responisve.scss';
+
+
 /* Remove the under lines from links in a List*/
 ul a {
   color: inherit;
@@ -13,7 +16,9 @@ ul a {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
   position: relative;
-  height: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }

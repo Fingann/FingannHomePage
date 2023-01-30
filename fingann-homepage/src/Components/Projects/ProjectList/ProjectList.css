@@ -19,8 +19,15 @@ ul a {
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
   position: relative;
-  height: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 /*# sourceMappingURL=ProjectList.css.map */

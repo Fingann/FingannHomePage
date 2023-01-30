@@ -8,11 +8,8 @@
     padding: 0rem 1rem 1rem 1rem;
     @include respond-to(handhelds) { 
         padding: 0%;
-    }
-        
-    
+    }        
 }
-
 
 .loading{
     color: white;

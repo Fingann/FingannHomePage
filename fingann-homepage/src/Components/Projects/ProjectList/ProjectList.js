@@ -12,9 +12,9 @@ const newest_projects_sort = (a, b) => {
 const ProjectList = ({Projects})=> {
       const projectList = Projects.sort(newest_projects_sort).map((project,i) => <ProjectItem key={i} project={project}/>);
       return (
-        <ul className="grid-list">
+        <div className="grid-list">
           {projectList}
-        </ul> 
+        </div> 
       );
     
   }

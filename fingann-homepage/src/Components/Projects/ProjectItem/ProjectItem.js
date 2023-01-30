@@ -12,8 +12,9 @@ class ProjectItem extends Component {
 
   render() {
     return (
-      <a href={this.props.project.html_url}>
-        <li className="projectItem ">
+        <div className="projectItem" onclick="location.href='{this.props.project.html_url}';" >
+
+
           <div className="background">
             <div className="project-text">
               <h2> {this.props.project.name}</h2>
@@ -23,17 +24,12 @@ class ProjectItem extends Component {
             </div>
             <div className="project-info">
               <p>
-                Writen in{" "}
+                Language{" "}
                 <span className="font-bold">
                   {this.props.project.language || "Not detected"}
                 </span>
               </p>
-              <p>
-                Created{" "}
-                <span className="font-bold">
-                  {this.format_date(this.props.project.created_at)}
-                </span>
-              </p>
+ 
               <p>
                 Updated{" "}
                 <span className="font-bold">
@@ -42,8 +38,9 @@ class ProjectItem extends Component {
               </p>
             </div>
           </div>
-        </li>
-      </a>
+         
+        </div>
+      
     );
   }
 }

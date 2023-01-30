@@ -1,6 +1,14 @@
 .projectItem {
   padding: 0.7rem;
   border-radius: 9px;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .projectItem {
+    max-width: 480px;
+  }
 }
 
 .background {
@@ -14,6 +22,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
   filter: alpha(opacity=40);
   /* For IE8 and earlier */
 }

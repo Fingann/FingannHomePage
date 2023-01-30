@@ -1,10 +1,16 @@
-@import '../../GlobalCss/Responisve.scss';
+@import '../../../GlobalCss/Responisve.scss';
 
 .projectItem{
     padding:0.7rem;
     border-radius: 9px;
-
-}
+    width: 100%;
+    cursor: pointer;
+    @include respond-to(wide-screens) { 
+      max-width: 480px;
+    }
+      
+ 
+  }
 
 
 .background {
@@ -13,6 +19,8 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   filter: alpha(opacity=40); /* For IE8 and earlier */
 
   &:hover{
